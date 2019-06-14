@@ -1,4 +1,4 @@
-# XORŒðŠ·ƒAƒ‹ƒSƒŠƒYƒ€
+# XORäº¤æ›ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ 
 
 def xor_swap(x, y)
   x = x ^ y

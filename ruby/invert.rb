@@ -1,4 +1,4 @@
-# modulo m ‚Å‚Ìa‹t”
+# modulo m ã§ã®aé€†æ•°
 def invert(x, y)  
   a = y          
   b = x % y      

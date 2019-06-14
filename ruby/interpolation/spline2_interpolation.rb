@@ -1,4 +1,4 @@
-# 3ŸSpline•âŠÔ
+# 3æ¬¡Splineè£œé–“
 class Spline
   def initialize(x, y)
     @x = x
@@ -7,12 +7,12 @@ class Spline
     d = [0]
 
     1.upto(n) do |i|
-      h[i] =  x[i] - x[i - 1]                          # ŠÔŠu
-      d[i] = (y[i] - y[i - 1]) / h[i]                  # ˆêŸ”÷•ª
+      h[i] =  x[i] - x[i - 1]                          # é–“éš”
+      d[i] = (y[i] - y[i - 1]) / h[i]                  # ä¸€æ¬¡å¾®åˆ†
     end
 
     1.upto(n) do |i|
-      d[i] = (d[i + 1] - d[i]) / (x[i + 1] - x[i - 1]) # “ñŸ”÷•ª
+      d[i] = (d[i + 1] - d[i]) / (x[i + 1] - x[i - 1]) # äºŒæ¬¡å¾®åˆ†
     end
 
     while x x[n - 1]
@@ -25,28 +25,28 @@ class Spline
 end
    int i;
    double x,y,yy0,yy1,yy2,yy3;
-   double[] h=new double[20];     //ŠÔŠu
-   double[] dif1=new double[20];  //ˆêŸ”÷•ª
-   double[] dif2=new double[20];  //“ñŸ”÷•ª
+   double[] h=new double[20];     //é–“éš”
+   double[] dif1=new double[20];  //ä¸€æ¬¡å¾®åˆ†
+   double[] dif2=new double[20];  //äºŒæ¬¡å¾®åˆ†
 
    h[0]=0.0;
    dif2[0]=0.0;
    dif2[data_count-1]=0.0; 
 
    Graphics g=getGraphics();
-   g.setColor(new Color(0,192,192));  //dark cyan‚Åü‚ğˆø‚­
+   g.setColor(new Color(0,192,192));  //dark cyanã§ç·šã‚’å¼•ã
 
    i=1;
    for(x=dataX[0];x<dataX[data_count-1];x+=0.01){
       if(x<dataX[i]){
          yy0=dif2[i-1]/(6*h[i])*(dataX[i]-x)
-            *(dataX[i]-x)*(dataX[i]-x);       //‘æ‚P€
+            *(dataX[i]-x)*(dataX[i]-x);       //ç¬¬ï¼‘é …
          yy1=dif2[i]/(6*h[i])*(x-dataX[i-1])
-            *(x-dataX[i-1])*(x-dataX[i-1]);   //‘æ‚Q€
+            *(x-dataX[i-1])*(x-dataX[i-1]);   //ç¬¬ï¼’é …
          yy2=(dataY[i-1]/h[i]-h[i]*dif2[i-1]/6)
-            *(dataX[i]-x);                    //‘æ‚R€
+            *(dataX[i]-x);                    //ç¬¬ï¼“é …
          yy3=(dataY[i]/h[i]-h[i]*dif2[i]/6)*
-            (x-dataX[i-1]);                   //‘æ‚S€
+            (x-dataX[i-1]);                   //ç¬¬ï¼”é …
          y=yy0+yy1+yy2+yy3;
          g.drawRect(X0+(int)(10*x),Y0+(int)(10*(40-y)),0,0);
       }
