@@ -62,7 +62,7 @@ if $0 == __FILE__
   curve = Spline.new(x, y)
   i = 1.0
   while i <= 5.0
-    printf("%f,%f\r\n", i, curve.interpolate(i))
+    printf("%f,%f\n", i, curve.interpolate(i))
     i += 0.1
   end
 end
