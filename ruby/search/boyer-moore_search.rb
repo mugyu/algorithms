@@ -17,7 +17,7 @@ def bm(text, pattern)
   else
     skip = Array.new(UCHAR_MAX, len)
     while i < len - 1
-      skip[pattern[i]] = len - 1 - i
+      skip[pattern[i].ord] = len - 1 - i
       i += 1
     end
 
@@ -30,7 +30,7 @@ def bm(text, pattern)
           return k if j == 0
         end
       end
-      i += skip[c]
+      i += skip[c.ord]
     end
   end
   nil
