@@ -19,7 +19,7 @@ data = [
 
 payload = 8
 
-def napzak(data, payload)
+def knapsack(data, payload)
   # initialize
   dp = Array.new(1, Array.new(payload + 1, 0))
 
@@ -44,7 +44,7 @@ def napzak(data, payload)
   pp dp
   dp[-1][-1]
 end
-p napzak(data, payload)
+p knapsack(data, payload)
 
 # => [[0, 0, 0, 0, 0, 0, 0, 0, 0],
 # =>  [0, 0, 3, 3, 3, 3, 3, 3, 3],

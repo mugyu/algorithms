@@ -19,7 +19,7 @@ data = [
 
 payload = 8
 
-def napzak(data, payload)
+def knapsack(data, payload)
   tmp = data.sort_by do |weight, value|
     # 「価値 / 重さ」を評価値とする
     Rational(value, weight)
@@ -44,7 +44,7 @@ def napzak(data, payload)
   end
 end
 
-pp napzak(data, payload)
+pp knapsack(data, payload)
 
 # [7, 90]
 #
