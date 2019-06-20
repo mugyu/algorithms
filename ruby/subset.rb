@@ -9,7 +9,7 @@ def subset1(data, number)
   data.each do |v1|
     dp.length.times do |j|
       v = v1 + dp[j]
-      return true if v === number
+      return true if v == number
       dp.push(v) unless dp.include? v
     end
   end
