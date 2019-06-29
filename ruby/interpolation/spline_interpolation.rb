@@ -1,4 +1,5 @@
 # 非周期関数用3次スプライン補間
+# http://hooktail.org/computer/index.php?Ruby%BC%C2%CD%D1%CE%E3%20%A1%C1%A5%B9%A5%D7%A5%E9%A5%A4%A5%F3%CA%E4%B4%D6%A1%C1
 class Spline
   # 初期化．3次スプライン補間曲線を求める
   def initialize(x, y)
