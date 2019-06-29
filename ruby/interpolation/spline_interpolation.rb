@@ -50,8 +50,8 @@ class Spline
     i -= 1 if i > 0
     h = @x[i+1] - @x[i]
     d = t - @x[i]
-    return (((@z[i+1] - @z[i]) * d / h + @z[i] * 3) * d
-          + ((@y[i+1] - @y[i]) / h
+    return (((@z[i+1] - @z[i]) * d / h + @z[i] * 3) * d \
+          + ((@y[i+1] - @y[i]) / h \
           -  (@z[i] * 2 + @z[i+1]) * h)) * d + @y[i]
   end
 end
