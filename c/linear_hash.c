@@ -1,7 +1,7 @@
 /**
  * LINEAR HASH
  *   線形二乗アルゴリズムを使用
- *   Rubyと違ってC言語だと mod に比べてかんり早くなる
+ *   Rubyと違ってC言語だと mod に比べてかなり早くなる
  *
  * linear hash: 3.608443
  * hash(mod): 5.345495
