@@ -2,6 +2,7 @@
 # B-スプライン曲線
 #  開一様ノットベクトル( open uniform knot vector ) or
 #  一様間隔ノットベクトル( uniformly-spaced knot vector )
+#  referenced https://babu-babu-baboo.hateblo.jp/entry/20170106/1483663603
 require 'rational'
 class BSpline
   def initialize(data)
