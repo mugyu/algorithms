@@ -14,14 +14,12 @@ float fast_inverse_square_root(float x) {
 }
 
 int main(void) {
-  char *line = NULL, *endptr = NULL;
-  size_t size;
+  char line[8];
+  char *endptr = NULL;
   float x;
-  while (getline(&line, &size, stdin) != -1) {
+  while (scanf("%s", line) != -1) {
     x = strtof(line, &endptr);
-    if (*endptr == '\n') {
-      printf("%f\n", fast_inverse_square_root(x));
-    }
+    printf("%f\n", fast_inverse_square_root(x));
   }
   return 0;
 }
